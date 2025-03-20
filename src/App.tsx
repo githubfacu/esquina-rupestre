@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Layout, Search, Filter, MapPin, Clock, Phone } from 'lucide-react';
+import { Search, Filter, MapPin, Clock, Phone } from 'lucide-react';
 import { ThemeProvider } from './context/ThemeContext';
 import { ThemeToggle } from './components/ThemeToggle';
 import { ProductCard } from './components/ProductCard';
