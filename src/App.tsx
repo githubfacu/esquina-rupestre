@@ -23,7 +23,7 @@ function App() {
         <header className="fixed top-0 left-0 w-full z-50 h-16 bg-gray-100 dark:bg-[#1a1a20] shadow-md">
           <div className="container h-full flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <img src='/fotor-ai-20250319221926-icon.ico' className="w-8 h-8 text-[#3a5ccc] dark:text-blue-400" />
+              <img src='/fotor-ai-20250319221926-icon.ico' className="w-8 h-8 text-[#3a5ccc] dark:text-blue-400" alt='Ícono de Esquina Rupestre'/>
               <h1 className="text-2xl font-bold text-gray-800 dark:text-white">Esquina Rupestre</h1>
             </div>
             <ThemeToggle />
@@ -43,10 +43,10 @@ function App() {
           
           <div className="relative container mx-auto px-4 py-24">
             <div className="max-w-2xl text-white">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">La Esquina Rupestre</h2>
-              <p className="text-xl mb-8">Catálogo de productos de calidad. Descubre nuestra selección de artículos.</p>
+              <h2 className="text-4xl md:text-6xl font-bold mb-7">La Esquina Rupestre</h2>
+              <p className="text-lg mb-8">Catálogo de productos de calidad. Descubre nuestra selección de artículos.</p>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                 <div className="flex items-center space-x-2">
                   <MapPin className="w-5 h-5 text-blue-400" />
                   <span>Av. Principal #123, Ostende</span>
@@ -72,6 +72,8 @@ function App() {
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
                 <input
                   type="text"
+                  id="searchInput"
+                  name="searchInput" 
                   placeholder="Buscar productos..."
                   className="w-full pl-10 pr-4 py-2 rounded-md border text-gray-900 dark:text-gray-50 border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   value={searchTerm}
@@ -110,8 +112,8 @@ function App() {
         {/* Main Content */}
         <main className="container mx-auto px-4 py-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredProducts.map(product => (
-              <ProductCard key={product.id} product={product} />
+            {filteredProducts.map((product, index) => (
+              <ProductCard key={index} product={product} />
             ))}
           </div>
           
