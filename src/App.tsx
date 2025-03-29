@@ -18,9 +18,9 @@ function App() {
 
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-gray-100 dark:bg-[#1a1a20]">
+      <div className="min-h-screen bg-gray-100 dark:bg-[#121313]">
         {/* Header */}
-        <header className="fixed top-0 left-0 w-full z-50 h-16 bg-gray-100 dark:bg-[#1a1a20] shadow-md">
+        <header className="fixed top-0 left-0 w-full z-50 h-16 bg-gray-100 dark:bg-[#121313] shadow-md">
           <div className="container h-full flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <img src='/fotor-ai-20250319221926-icon.ico' className="w-8 h-8 text-[#3a5ccc] dark:text-blue-400" alt='Ícono de Esquina Rupestre'/>
@@ -35,7 +35,7 @@ function App() {
           <div className="absolute inset-0">
             <img
               src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1600&q=80"
-              alt="Esquina Rupestre"
+              alt="Imagen de Portada de Esquina Rupestre"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50"></div>
@@ -65,7 +65,7 @@ function App() {
         </section>
 
         {/* Search and Filters */}
-        <div className="bg-white dark:bg-[#1a1a20] shadow-md dark:shadow-gray-900 py-4">
+        <div className="bg-white dark:bg-[#121313] shadow dark:shadow-[#353738] py-4">
           <div className="container mx-auto px-4">
             <div className="flex flex-col sm:flex-row gap-4">
               <div className="relative flex-1">
@@ -75,7 +75,8 @@ function App() {
                   id="searchInput"
                   name="searchInput" 
                   placeholder="Buscar productos..."
-                  className="w-full pl-10 pr-4 py-2 rounded-md border text-gray-900 dark:text-gray-50 border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  aria-label="Buscar productos"
+                  className="w-full pl-10 pr-4 py-2 rounded-md border text-gray-900 dark:text-gray-50 border-gray-400 dark:border-gray-600 bg-white dark:bg-[#353738] focus:outline-none focus:ring-1 focus:ring-blue-500"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
@@ -85,7 +86,7 @@ function App() {
                   onClick={() => setSelectedCategory('')}
                   className={`px-4 py-2 rounded-md font-semibold ${
                     selectedCategory === '' 
-                      ? 'bg-[#1259c3] text-white' 
+                      ? 'bg-red-700 text-white' 
                       : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200'
                   }`}
                 >
@@ -97,7 +98,7 @@ function App() {
                     onClick={() => setSelectedCategory(category.id)}
                     className={`px-4 py-2 rounded-md font-semibold ${
                       selectedCategory === category.id
-                        ? 'bg-[#1259c3] text-white'
+                        ? 'bg-red-700 text-white'
                         : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200'
                     }`}
                   >
@@ -127,7 +128,7 @@ function App() {
           )}
         </main>
       </div>
-      <footer className='flex items-center justify-center bg-gray-100 dark:bg-[#1a1a20] py-4 border-t-[1px] border-gray-200 dark:border-gray-700'>
+      <footer className='flex items-center justify-center bg-gray-100 dark:bg-[#121313] py-4 border-t-[1px] border-gray-200 dark:border-[#353738]'>
         <p className='text-gray-900 dark:text-gray-100'>
           Hecho por Facus
         </p>
