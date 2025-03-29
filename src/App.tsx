@@ -76,7 +76,7 @@ function App() {
                   name="searchInput" 
                   placeholder="Buscar productos..."
                   aria-label="Buscar productos"
-                  className="w-full pl-10 pr-4 py-2 rounded-md border text-gray-900 dark:text-gray-50 border-gray-400 dark:border-gray-600 bg-white dark:bg-[#353738] focus:outline-none focus:ring-1 focus:ring-blue-500"
+                  className="w-full pl-10 pr-4 py-2 rounded-lg border text-gray-900 dark:text-gray-50 border-gray-400 dark:border-gray-600 bg-white dark:bg-[#353738] focus:outline-none focus:ring-1 focus:ring-blue-500"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
@@ -84,7 +84,7 @@ function App() {
               <div className="flex gap-2 overflow-x-auto pb-2 sm:pb-0 flex-wrap">
                 <button
                   onClick={() => setSelectedCategory('')}
-                  className={`px-4 py-2 rounded-md font-semibold ${
+                  className={`px-4 py-2 rounded-lg font-semibold ${
                     selectedCategory === '' 
                       ? 'bg-red-700 text-white' 
                       : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200'
@@ -96,7 +96,7 @@ function App() {
                   <button
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
-                    className={`px-4 py-2 rounded-md font-semibold ${
+                    className={`px-4 py-2 rounded-lg font-semibold ${
                       selectedCategory === category.id
                         ? 'bg-red-700 text-white'
                         : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200'

@@ -49,7 +49,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
             </span>
             <button 
               onClick={ () => setShowDetail(true) }
-              className="flex items-center space-x-2 px-4 py-2 bg-red-700 text-white rounded-md hover:bg-red-800 transition-colors duration-75 font-semibold"
+              className="flex items-center space-x-2 px-4 py-2 bg-red-700 text-white rounded-lg hover:bg-red-800 transition-colors duration-75 font-semibold"
             >
               <span>Ver Detalles</span>
             </button>
